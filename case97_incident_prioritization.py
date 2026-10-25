@@ -1,6 +1,3 @@
-# Case Study 97: Smart Campus Incident and Maintenance Prioritization
-# Report tuple: (id, description, location, severity 1-5, times reported)
-
 loc_names = ["Hostel", "Lab", "Library", "Canteen", "Ground"]
 loc_weight = [4, 4, 3, 3, 1]
 
@@ -11,10 +8,10 @@ reports = [
     ("M04", "Short circuit sparks",  "Lab",     5, 2),
     ("M05", "Fan noise",             "Library", 1, 8),
     ("M06", "Gas leak smell",        "Canteen", 5, 4),
-    ("M07", "Lift stuck",            "Block Z", 4, 2),     # unknown location
+    ("M07", "Lift stuck",            "Block Z", 4, 2),
 ]
 
-scored = []      # [score, id, description, location, class]
+scored = []
 for r in reports:
     rid, desc, loc, sev, freq = r
     w = -1
@@ -25,7 +22,7 @@ for r in reports:
         w = 2           # default weight for unknown location
     f = freq
     if f > 5:
-        f = 5           # frequency contribution capped at 5
+        f = 5
     score = sev * 10 + w * 5 + f * 2
     if score >= 70:
         cls = "CRITICAL"
