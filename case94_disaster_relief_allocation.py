@@ -1,12 +1,6 @@
-# Case Study 94: Disaster Relief Supply Allocation
-# Policy: areas are served by urgency (3 = most urgent), then by name.
-#         No single area may receive more than 50% of the initial stock of an item.
-
 items = ["Food packs", "Water (L)", "Medical kits", "Blankets"]
 stock = [500, 1000, 80, 200]
 initial = stock[:]
-
-# Area: [name, urgency, [need per item]]
 areas = [
     ["Riverside", 3, [300, 600, 50, 100]],
     ["Hilltop",   2, [200, 400, 30, 80]],
