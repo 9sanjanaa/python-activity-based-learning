@@ -1,15 +1,12 @@
-# Case Study 100: Comprehensive Smart Campus Management Simulation (menu-driven)
 subjects = ["Python", "Maths", "Physics"]
 events = ["Hackathon", "Quiz", "Cultural Fest"]
-
-# Student: [roll, name, classes attended, classes held, [marks]]
 students = [
     ["101", "Anil",  36, 40, [80, 70, 90]],
     ["102", "Bhanu", 28, 40, [55, 38, 62]],
     ["103", "Chitra", 40, 40, [92, 88, 95]],
 ]
-registrations = [("101", "Hackathon")]          # tuples (roll, event)
-resources = [["Projector", 3, 0], ["Laptop", 10, 0], ["Seminar Hall", 1, 0]]   # name, total, allocated
+registrations = [("101", "Hackathon")]          
+resources = [["Projector", 3, 0], ["Laptop", 10, 0], ["Seminar Hall", 1, 0]]
 
 while True:
     print("\n===== SMART CAMPUS MENU =====")
