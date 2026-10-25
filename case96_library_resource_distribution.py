@@ -1,9 +1,6 @@
-# Case Study 96: Multi-Criteria Library Resource Distribution
 books = ["Python", "DSA", "DBMS", "Networks"]
 copies = [30, 20, 10, 12]
 total_copies = copies[:]
-
-# Branch: [name, priority (1 = highest), [demand per book]]
 branches = [
     ["CSE", 1, [25, 18, 8, 6]],
     ["ECE", 2, [15, 10, 6, 10]],
