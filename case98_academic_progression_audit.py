@@ -1,11 +1,8 @@
-# Case Study 98: University Academic Progression Audit
 subjects = ["Maths", "Physics", "Python", "English", "Chemistry"]
 PASS_MARK = 40
 MIN_ATTENDANCE = 75
-MAX_BACKLOGS = 1                        # conditional promotion allowed up to this
+MAX_BACKLOGS = 1
 REQUIRED = ["MAT101", "PHY101", "CSE101"]
-
-# Student: (id, name, [marks], attendance %, [completed prerequisite codes])
 students = [
     ("S01", "Arun",   [78, 65, 80, 70, 66], 88, ["MAT101", "PHY101", "CSE101"]),
     ("S02", "Bhanu",  [55, 38, 62, 70, 58], 80, ["MAT101", "PHY101", "CSE101"]),
