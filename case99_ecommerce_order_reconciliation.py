@@ -1,19 +1,16 @@
-# Case Study 99: Integrated E-Commerce Order Processing and Reconciliation
-products = ["Laptop", "Mouse", "Keyboard", "Monitor"]
-prices = [55000, 500, 1200, 9000]
+
+products = ["Laptop", "Mouse", "Keyboard", "Monitor"]prices = [55000, 500, 1200, 9000]
 stock = [10, 50, 30, 8]
 opening = stock[:]
-
-# Order tuple: (order id, product, quantity, discount %)
 orders = [
     ("O1", "Laptop",   3, 5),
     ("O2", "Mouse",    20, 10),
     ("O3", "Monitor",  6, 0),
-    ("O4", "Monitor",  4, 0),       # only 2 left -> backorder
+    ("O4", "Monitor",  4, 0),       
     ("O5", "Keyboard", 10, 15),
-    ("O6", "Tablet",   1, 0),       # unknown product
+    ("O6", "Tablet",   1, 0),       
 ]
-# Return tuple: (order id, quantity)
+
 returns = [("O2", 5), ("O1", 1), ("O5", 12), ("O4", 1), ("O9", 1)]
 
 dispatched = [0] * len(orders)
