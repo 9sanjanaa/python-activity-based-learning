@@ -1,20 +1,18 @@
-# Case Study 93: Smart Public Transport Fare Reconciliation
+
 routes = ["R1", "R2", "R3"]
 base_fare = [10, 15, 25]
 categories = ["Adult", "Student", "Senior", "Child"]
 factor = [1.0, 0.5, 0.5, 0.0]
-
-# Trip record tuple: (route, category, passengers, amount collected)
 trips = [
     ("R1", "Adult",   40, 400),
     ("R1", "Student", 30, 150),
-    ("R1", "Senior",  10, 40),     # short by 10
+    ("R1", "Senior",  10, 40),     
     ("R2", "Adult",   25, 375),
     ("R2", "Child",   8,  0),
-    ("R2", "Student", 20, 200),    # excess 50
+    ("R2", "Student", 20, 200),    
     ("R3", "Adult",   15, 375),
     ("R3", "Senior",  6,  75),
-    ("R3", "Pilot",   2,  0),      # invalid category
+    ("R3", "Pilot",   2,  0),      
 ]
 
 route_expected = [0.0] * len(routes)
