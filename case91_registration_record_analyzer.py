@@ -1,6 +1,3 @@
-# Case Study 91: Advanced String-Based Registration Record Analyzer
-# Format: YY + BRANCH(3 capital letters) + 3 digits   ->  e.g. 23CSE045  (8 characters)
-
 BRANCHES = ["CSE", "ECE", "EEE", "MEC", "CIV"]
 MIN_YEAR = 20
 MAX_YEAR = 26
