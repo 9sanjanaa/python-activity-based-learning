@@ -1,6 +1,3 @@
-# Case Study 92: Multi-Event Sports Scheduling and Scoring
-# Event tuple: (id, venue, start, end, team1, team2, score1, score2)
-
 events = [
     ("E1", "Ground A", "09:00", "10:30", "Tigers", "Lions",   2, 1),
     ("E2", "Ground A", "10:00", "11:30", "Eagles", "Wolves",  0, 0),
@@ -9,16 +6,12 @@ events = [
     ("E5", "Ground A", "12:00", "13:00", "Wolves", "Lions",   0, 2),
 ]
 WIN, DRAW = 3, 1
-
-# ---- time conversion HH:MM -> minutes ----
 mins = []
 for ev in events:
     eid, venue, st, en, t1, t2, s1, s2 = ev
     start = int(st[0:2]) * 60 + int(st[3:5])
     end = int(en[0:2]) * 60 + int(en[3:5])
     mins.append((start, end))
-
-# ---- conflict detection ----
 print("=== Scheduling Conflicts ===")
 conflicts = 0
 for i in range(len(events)):
@@ -39,9 +32,7 @@ for i in range(len(events)):
                 conflicts = conflicts + 1
 if conflicts == 0:
     print("No conflicts")
-
-# ---- scoring ----
-table = []     # [team, played, points, goals for, goals against]
+table = []     
 for ev in events:
     for t in (ev[4], ev[5]):
         found = False
@@ -67,7 +58,7 @@ for ev in events:
             elif s1 == s2:
                 row[2] += DRAW
 
-# rank: points, goal difference, goals for, name
+
 n = len(table)
 for i in range(n - 1):
     for j in range(n - 1 - i):
